@@ -68,14 +68,14 @@ def analyze_business_listings(html_path: Path) -> dict:
 
         report[key] = {
             "label": config["label"],
-            "status": "LINKED_FROM_WEBSITE" if found else "NOT_LINKED_FROM_WEBSITE",
+            "status": "LINKED_FROM_WEBSITE" if found else "NOT_VERIFIED",
             "score": config["weight"] if found else 0,
             "max_score": config["weight"],
             "evidence": matched_urls,
             "recommendation": (
                 ""
                 if found
-                else f"Verify or create the {config['label']} listing and link it from the dealer website."
+                else f", Verify whether the dealer has an active \"{config['label']}\" listing."
             ),
         }
 
