@@ -1,0 +1,252 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Flooring Advisor API",
+    "description": "API for retailer lookup and lead capture for the Pet-Proof Flooring Advisor.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/retailers": {
+      "get": {
+        "summary": "Find Retailers",
+        "operationId": "find_retailers_retailers_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Zip"
+            },
+            "name": "zip",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetailerResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/leads": {
+      "post": {
+        "summary": "Create Lead",
+        "operationId": "create_lead_leads_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LeadRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LeadResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "LeadRequest": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "title": "Email"
+          },
+          "zip": {
+            "type": "string",
+            "title": "Zip"
+          },
+          "recommended_product": {
+            "type": "string",
+            "title": "Recommended Product"
+          },
+          "customer_need": {
+            "type": "string",
+            "title": "Customer Need"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "email",
+          "zip",
+          "recommended_product"
+        ],
+        "title": "LeadRequest"
+      },
+      "LeadResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "lead_id": {
+            "type": "string",
+            "title": "Lead Id"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "lead_id",
+          "message"
+        ],
+        "title": "LeadResponse"
+      },
+      "Retailer": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "city": {
+            "type": "string",
+            "title": "City"
+          },
+          "state": {
+            "type": "string",
+            "title": "State"
+          },
+          "zip": {
+            "type": "string",
+            "title": "Zip"
+          },
+          "phone": {
+            "type": "string",
+            "title": "Phone"
+          },
+          "distance_miles": {
+            "type": "number",
+            "title": "Distance Miles"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "city",
+          "state",
+          "zip",
+          "phone",
+          "distance_miles"
+        ],
+        "title": "Retailer"
+      },
+      "RetailerResponse": {
+        "properties": {
+          "zip": {
+            "type": "string",
+            "title": "Zip"
+          },
+          "retailers": {
+            "items": {
+              "$ref": "#/components/schemas/Retailer"
+            },
+            "type": "array",
+            "title": "Retailers"
+          }
+        },
+        "type": "object",
+        "required": [
+          "zip",
+          "retailers"
+        ],
+        "title": "RetailerResponse"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

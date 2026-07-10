@@ -1,0 +1,81 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ignoredPackages">
+        <list>
+          <option value="accelerate" />
+          <option value="aiohappyeyeballs" />
+          <option value="aiohttp" />
+          <option value="aiosignal" />
+          <option value="asttokens" />
+          <option value="async-timeout" />
+          <option value="attrs" />
+          <option value="backcall" />
+          <option value="blis" />
+          <option value="catalogue" />
+          <option value="cloudpathlib" />
+          <option value="colorama" />
+          <option value="comm" />
+          <option value="confection" />
+          <option value="cymem" />
+          <option value="datasets" />
+          <option value="dill" />
+          <option value="evaluate" />
+          <option value="exceptiongroup" />
+          <option value="executing" />
+          <option value="frozenlist" />
+          <option value="ipython" />
+          <option value="ipywidgets" />
+          <option value="jedi" />
+          <option value="jupyterlab_widgets" />
+          <option value="langcodes" />
+          <option value="language_data" />
+          <option value="loguru" />
+          <option value="marisa-trie" />
+          <option value="matplotlib-inline" />
+          <option value="multidict" />
+          <option value="multiprocess" />
+          <option value="murmurhash" />
+          <option value="pandas" />
+          <option value="parso" />
+          <option value="pickleshare" />
+          <option value="preshed" />
+          <option value="prompt_toolkit" />
+          <option value="propcache" />
+          <option value="psutil" />
+          <option value="pure_eval" />
+          <option value="pyarrow" />
+          <option value="Pygments" />
+          <option value="pysolr" />
+          <option value="python-dateutil" />
+          <option value="python-multipart" />
+          <option value="pytz" />
+          <option value="responses" />
+          <option value="sentencepiece" />
+          <option value="six" />
+          <option value="smart-open" />
+          <option value="sniffio" />
+          <option value="spacy" />
+          <option value="spacy-legacy" />
+          <option value="spacy-loggers" />
+          <option value="srsly" />
+          <option value="stack-data" />
+          <option value="thinc" />
+          <option value="traitlets" />
+          <option value="typer" />
+          <option value="tzdata" />
+          <option value="uvicorn" />
+          <option value="wasabi" />
+          <option value="wcwidth" />
+          <option value="weasel" />
+          <option value="widgetsnbextension" />
+          <option value="win32_setctime" />
+          <option value="xxhash" />
+          <option value="yarl" />
+          <option value="rapidfuzz" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

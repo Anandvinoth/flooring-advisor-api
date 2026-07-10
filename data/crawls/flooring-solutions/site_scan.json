@@ -1,0 +1,17 @@
+{
+  "site": "flooring-solutions",
+  "url": "https://www.flooring-solutions.com",
+  "homepage_status": 200,
+  "robots_found": true,
+  "sitemap_found": true,
+  "schema_types": [
+    "WebSite"
+  ],
+  "has_faq_text": false,
+  "has_contact_text": true,
+  "has_about_text": true,
+  "has_brand_text": true,
+  "has_mohawk_text": false,
+  "has_livermore_text": true,
+  "service_area_mentions": 2
+}
