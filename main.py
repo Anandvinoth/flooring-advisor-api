@@ -3,6 +3,7 @@ from pydantic import BaseModel, EmailStr
 from typing import List, Optional
 from datetime import datetime
 from fastapi.middleware.cors import CORSMiddleware
+from dealer_intelligence.api.routes import router as dealer_intelligence_router
 from agent_service import ask_agent
 import uuid
 import json
@@ -30,6 +31,8 @@ app = FastAPI(
     description="API for retailer lookup and lead capture for the Pet-Proof Flooring Advisor.",
     openapi_version="3.0.3"
 )
+
+app.include_router(dealer_intelligence_router)
 
 app.add_middleware(
     CORSMiddleware,
