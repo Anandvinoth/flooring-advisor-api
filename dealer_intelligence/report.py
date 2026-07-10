@@ -1,5 +1,5 @@
 import json
-from scoring import score_site
+from dealer_intelligence.scoring import score_site
 from pathlib import Path
 
 
