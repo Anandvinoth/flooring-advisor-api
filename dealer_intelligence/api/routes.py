@@ -5,7 +5,9 @@ from dealer_intelligence.services.social_presence_service import (
     analyze_social_presence,
 )
 from dealer_intelligence.models.requests import DealerAnalysisRequest
-from dealer_intelligence.models.responses import DealerAnalysisResponse
+from dealer_intelligence.services.business_listing_service import (
+    analyze_business_listings,
+)
 
 
 router = APIRouter(
@@ -30,7 +32,7 @@ async def analyze_dealer(
             "url": str(request.url),
             "message": "Crawl data not found for this dealer.",
         }
-
+    business_listings = analyze_business_listings(html_path)
     social_presence = analyze_social_presence(html_path)
 
     return {
@@ -39,5 +41,6 @@ async def analyze_dealer(
         "url": str(request.url),
         "scores": {
             "social_presence": social_presence,
+            "business_listings": business_listings,
         },
     }

@@ -75,7 +75,7 @@ def analyze_business_listings(html_path: Path) -> dict:
             "recommendation": (
                 ""
                 if found
-                else f", Verify whether the dealer has an active \"{config['label']}\" listing."
+                else f"Verify whether the dealer has an active \"{config['label']}\" listing."
             ),
         }
 
