@@ -14,7 +14,7 @@ from dealer_intelligence.services.social_presence_service import (
 from dealer_intelligence.services.local_seo_service import (
     analyze_local_seo,
 )
-
+from dealer_intelligence.pipelines.dealer_pipeline import DealerPipeline
 
 router = APIRouter(
     prefix="/api/dealer-intelligence",
@@ -76,6 +76,13 @@ async def analyze_dealer(request: DealerAnalysisRequest):
         site_scan=site_scan,
     )
 
+    pipeline = DealerPipeline(
+        site_id=site_id,
+        dealer_url=dealer_url,
+    )
+
+    pipeline_result = pipeline.run(crawl_rounds=2)
+
     return {
         "status": "success",
         "dealer": request.dealer_name,
@@ -89,5 +96,6 @@ async def analyze_dealer(request: DealerAnalysisRequest):
             "website_metadata": metadata,
             "site_scan": site_scan,
             "local_seo": local_seo,
+            "pipeline": pipeline_result,
         },
     }
