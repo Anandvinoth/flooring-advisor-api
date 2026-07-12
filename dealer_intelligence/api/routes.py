@@ -1,8 +1,8 @@
 import re
 from pathlib import Path
-
+from dealer_intelligence.extractor import extract_site
 from fastapi import APIRouter, HTTPException
-
+from dealer_intelligence.site_scanner import scan_site
 from dealer_intelligence.crawler import crawl_site
 from dealer_intelligence.models.requests import DealerAnalysisRequest
 from dealer_intelligence.services.business_listing_service import (
@@ -54,6 +54,20 @@ async def analyze_dealer(request: DealerAnalysisRequest):
     social_presence = analyze_social_presence(html_path)
     business_listings = analyze_business_listings(html_path)
 
+    metadata = extract_site(
+        site_id=site_id,
+        dealer_url=dealer_url,
+        city=request.city,
+        state=request.state,
+    )
+
+    site_scan = scan_site(
+        site_id=site_id,
+        base_url=dealer_url,
+        city=request.city,
+        state=request.state,
+    )
+
     return {
         "status": "success",
         "dealer": request.dealer_name,
@@ -62,5 +76,9 @@ async def analyze_dealer(request: DealerAnalysisRequest):
         "scores": {
             "social_presence": social_presence,
             "business_listings": business_listings,
+        },
+        "evidence": {
+            "website_metadata": metadata,
+            "site_scan": site_scan,
         },
     }

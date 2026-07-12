@@ -1,0 +1,22 @@
+{
+  "site_id": "latta-floors",
+  "url": "https://www.lattafloors.com/",
+  "city": "Livermore",
+  "state": "CA",
+  "brand_name": "Mohawk",
+  "homepage_status": 200,
+  "robots_found": true,
+  "sitemap_found": true,
+  "schema_types": [
+    "LocalBusiness"
+  ],
+  "has_faq_text": false,
+  "has_contact_text": true,
+  "has_about_text": true,
+  "has_brand_text": true,
+  "has_target_brand_text": false,
+  "has_city_text": true,
+  "has_state_text": true,
+  "city_mentions": 5,
+  "state_mentions": 34
+}
