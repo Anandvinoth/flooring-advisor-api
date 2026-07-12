@@ -11,6 +11,9 @@ from dealer_intelligence.services.business_listing_service import (
 from dealer_intelligence.services.social_presence_service import (
     analyze_social_presence,
 )
+from dealer_intelligence.services.local_seo_service import (
+    analyze_local_seo,
+)
 
 
 router = APIRouter(
@@ -68,6 +71,11 @@ async def analyze_dealer(request: DealerAnalysisRequest):
         state=request.state,
     )
 
+    local_seo = analyze_local_seo(
+        metadata=metadata,
+        site_scan=site_scan,
+    )
+
     return {
         "status": "success",
         "dealer": request.dealer_name,
@@ -80,5 +88,6 @@ async def analyze_dealer(request: DealerAnalysisRequest):
         "evidence": {
             "website_metadata": metadata,
             "site_scan": site_scan,
+            "local_seo": local_seo,
         },
     }
