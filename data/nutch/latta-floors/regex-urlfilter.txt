@@ -1,0 +1,8 @@
+# Block assets
+-(?i).*\.(svg|jpg|jpeg|png|gif|webp|ico|css|js|woff|woff2|ttf|eot|mp4|mp3)(\?.*)?$
+
+# Allow current dealer domain only
++^https?://([a-z0-9-]+\.)?lattafloors\.com(/.*)?$
+
+# Reject everything else
+-.
