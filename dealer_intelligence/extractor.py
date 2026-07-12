@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 from urllib.parse import urlparse
-
+import re
 from bs4 import BeautifulSoup
 
 

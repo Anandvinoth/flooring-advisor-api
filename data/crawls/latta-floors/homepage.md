@@ -1,5 +1,5 @@
 1086 E Stanley Blvd, Livermore, CA 94550  
-[**(925) 215-6341**](tel:9252156341)
+[**(925) 396-7475**](tel:+19253967475)
 [![Latta Floors](https://clientassets.web.broadlume.com/1033/images/1373261.png)](https://www.lattafloors.com/)
 What are you looking for?
 ![Search](https://res.cloudinary.com/force/image/upload/f_auto,q_auto,w_32,h_32/c_limit,w_32/v1518471186/icons/icon_search2?_a=BAVAS1E60)
@@ -146,7 +146,7 @@ Meet with one of our skilled project specialists to get started
 [![Medieval flooring in Danville, CA from Latta Floors](https://res.cloudinary.com/force/image/upload/f_auto,q_auto,w_265,h_100/c_limit,w_265/v1661176844/dealers/latta-floors-d50f129f-f150-4574-a302-849cdfb0c01c/medieval-floors-logo-1-01?_a=BAVAS1DW0)](https://www.lattafloors.com/)
 [![Mohawk flooring in San Ramon, CA from Latta Floors](https://res.cloudinary.com/force/image/upload/f_auto,q_auto,w_310,h_140/c_limit,w_310/v1/logos/mohawk_orig_t?_a=BAVAS1DW0)](https://www.lattafloors.com/)
 [![Pergo flooring in Brentwood, CA from Latta Floors](https://res.cloudinary.com/force/image/upload/f_auto,q_auto,w_1082,h_406/c_limit,w_1082/v1661176978/dealers/latta-floors-d50f129f-f150-4574-a302-849cdfb0c01c/screen_shot_2022-08-22_at_10.02.49_am?_a=BAVAS1DW0)](https://www.lattafloors.com/)
-1086 East Stanley Boulevard Livermore, CA 94550 |[(925) 215-6341](tel:9252156341)
+1086 East Stanley Boulevard Livermore, CA 94550 |[(925) 396-7475](tel:+19253967475)
 [![](https://clientassets.web.broadlume.com/1033/images/687831.svg)](https://www.facebook.com/lattafloors1)[![](https://clientassets.web.broadlume.com/1033/images/687826.svg)](https://www.instagram.com/lattafloors)[![](https://clientassets.web.broadlume.com/1033/images/687827.svg)](https://www.linkedin.com/company/lattafloors/)
 #### Company
   * [About](https://www.lattafloors.com/about-us)

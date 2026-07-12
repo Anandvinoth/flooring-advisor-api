@@ -15,8 +15,8 @@
   "has_about_text": true,
   "has_brand_text": true,
   "has_target_brand_text": false,
-  "has_city_text": true,
-  "has_state_text": true,
   "city_mentions": 5,
-  "state_mentions": 34
+  "state_mentions": 5,
+  "has_city_text": true,
+  "has_state_text": true
 }
