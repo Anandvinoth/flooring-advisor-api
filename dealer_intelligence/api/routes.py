@@ -88,14 +88,17 @@ async def analyze_dealer(request: DealerAnalysisRequest):
         "dealer": request.dealer_name,
         "site_id": site_id,
         "url": dealer_url,
+
         "scores": {
             "social_presence": social_presence,
             "business_listings": business_listings,
+            "local_seo": local_seo,
         },
+
+        "pipeline": pipeline_result,
+
         "evidence": {
             "website_metadata": metadata,
             "site_scan": site_scan,
-            "local_seo": local_seo,
-            "pipeline": pipeline_result,
         },
     }
