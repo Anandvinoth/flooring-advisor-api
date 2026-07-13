@@ -81,7 +81,11 @@ async def analyze_dealer(request: DealerAnalysisRequest):
         dealer_url=dealer_url,
     )
 
-    pipeline_result = pipeline.run(crawl_rounds=2)
+    pipeline_result = pipeline.run(
+        city=request.city,
+        brand_name="Mohawk",
+        crawl_rounds=2,
+    )
 
     return {
         "status": "success",
